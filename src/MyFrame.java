@@ -2,14 +2,20 @@ import javax.swing.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
-public class MyFrame {
+public class MyFrame extends JFrame{
     public JPanel contentPane;
     private String name;
     private JTextField textField1;
     private JButton saludarButton;
     private JButton despedirButton;
 
-    public MyFrame() {
+    public MyFrame(String title) {
+        super(title);
+        setContentPane(contentPane);
+        setDefaultCloseOperation(EXIT_ON_CLOSE);
+        pack();
+        setLocationRelativeTo(null);
+
         saludarButton.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {

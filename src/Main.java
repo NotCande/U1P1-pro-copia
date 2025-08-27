@@ -5,18 +5,14 @@ import javax.swing.*;
 public class Main {
     public static void main(String[] args) {
 
-        //añadir el aspecto de windows classic
+        //añadir el aspecto de windows
         try {
             UIManager.setLookAndFeel("com.sun.java.swing.plaf.windows.WindowsLookAndFeel");
         } catch (Exception e) {
             e.printStackTrace();
         }
-        MyFrame view = new MyFrame();
-        JFrame frame = new JFrame("U1P1");
-        frame.setContentPane(view.contentPane);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); //terminar el proceso al terminar a la ventana
-        frame.pack(); //establece el tamaño deseado de la página
-        frame.setLocationRelativeTo(null); //ubica la ventana al centro de la pantalla
-        frame.setVisible(true);
+        MyFrame view = new MyFrame("U1P1");
+
+        view.setVisible(true);
     }
 }
